@@ -1,0 +1,31 @@
+import java.util.*;
+class Main {
+    public static void main(String [] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("\nEnter the array size: ");
+        int n=sc.nextInt();
+        int[] arry=new int[n];
+        System.out.print("Enter values:\t");
+        for(int i=0;i<n;i++){
+            arry[i]=sc.nextInt();
+        }
+        System.out.print("The given array is: ");
+        System.out.print("[ ");
+        for(int i=0;i<n;i++){
+            System.out.print(arry[i]+" ");
+        } System.out.print("]");
+        System.out.print("\nAfter sortging the array: [ ");
+        for(int i=0;i<n;i++){
+            for(int j =i+1;j<n;j++){
+                if(arry[i]>arry[j]){
+                    int temp=arry[i];
+                    arry[i]=arry[j];
+                    arry[j]=temp;
+                }
+            }System.out.print(arry[i]+" ");
+        }System.out.print("]");
+        System.out.print("\nThe first element of the array is: "+arry[0]);
+        System.out.print("\nThe flast element of the array is: "+arry[n-1]);
+    }
+}
+// designed by S△NTU
